@@ -18,7 +18,7 @@ body {
 }
 
 *:after,
-*before {
+*:before {
     box-sizing: inherit;
 }
 
@@ -30,13 +30,13 @@ body {
 }
 
 #spooky #body {
-   position: relative; 
-   margin: 50px auto 0;
-   width: 180px;
-   height: 220px;
-   background: #f2fbf1;
-   border-top-left-radius: 90px;
-   border-top-right-radius: 90px;
+    position: relative;
+    margin: 50px auto 0;
+    width: 180px;
+    height: 220px;
+    background: #f2fbf1;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
 }
 
 #spooky #body:before,
@@ -69,9 +69,9 @@ body {
     height: 20px;
 }
 
-#spooky #body #eyes:before, 
-#spooky #body #eyes:after{
-    content: '';
+#spooky #body #eyes:before,
+#spooky #body #eyes:after {
+    content: ' ';
     display: block;
     width: 30px;
     height: 30px;
@@ -89,13 +89,28 @@ body {
 }
 
 #spooky #body #mouth:before {
-    content: '';
+    content: ' ';
     display: block;
-    background: #ffffff;
+    background: #fff;
     margin-left: 20px;
     width: 10px;
     height: 10px;
 }
+
+#spooky #body #hand {
+    position: absolute;
+    top: 120px;
+    right: -60px;
+    animation: floaty .2s infinite;
+}
+
+#spooky #body #hand img {
+    width: 90px;
+    height: auto;
+    border-radius: 8px;
+    transform: rotate(10deg);
+}
+
 
 #spooky #body #feet {
     position: absolute;
@@ -106,11 +121,40 @@ body {
 }
 
 #spooky #body #feet > *,
-#spooky #body #feet:before, 
-#spooky #body #feet:after{
-    content: '';
+#spooky #body #feet::before,
+#spooky #body #feet::after {
+    content: ' ';
     width: 36px;
     height: 36px;
-    background: #f2f2f1;
+    background: #f2fbf1;
     border-radius: 50%;
+}
+
+#shadow {
+    margin: -90px auto 0;
+    background: #252c49;
+    width: 180px;
+    height: 40px;
+    border-radius: 50%;
+    animation: zoomy 2s infinite;
+}
+
+@keyframes floaty {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes zoomy {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
 }
