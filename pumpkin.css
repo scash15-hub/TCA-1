@@ -7,6 +7,10 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-image: url(ocean.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
@@ -82,10 +86,10 @@ body {
 
 .pumpkin .glasses {
   position: absolute;
-  width: 15vw;
-  left: 4.5em;
-  top: 2.2em;
-  z-index: 9999;
+  width: 70%;
+  left: 15%;
+  top: 15%;
+  z-index: 10;
 }
 
 .pumpkin .eye.left {
@@ -152,11 +156,27 @@ body {
 
 .shadow {
   margin: 10% auto 0;
-  background: #000;
+  background: linear-gradient(to right,
+      #ff6b6b,
+      /* Start color */
+      #ffa26c,
+      /* Start color */
+      #ffe66d
+      /* End color */
+    );
   width: 230px;
   height: 50px;
   border-radius: 50%;
   animation: zoom 3s infinite;
+}
+
+.pumpkin .arch {
+  position: absolute;
+  top: -30.5em;
+  width: 52em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
 }
 
 @keyframes float {
