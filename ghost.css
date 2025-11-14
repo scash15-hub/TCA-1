@@ -6,7 +6,10 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    background: #424f6f;
+    background-image: url(halloween.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #container {
@@ -14,7 +17,6 @@ body {
     height: 400px;
     padding: 0;
     box-sizing: border-box;
-    background: #424f6f;
 }
 
 *:after,
@@ -34,7 +36,7 @@ body {
     margin: 50px auto 0;
     width: 180px;
     height: 220px;
-    background: #f2fbf1;
+    background: #ffffff;
     border-top-left-radius: 90px;
     border-top-right-radius: 90px;
 }
@@ -92,10 +94,12 @@ body {
     content: ' ';
     display: block;
     background: #fff;
-    margin-left: 20px;
-    width: 10px;
+    margin-left: 12px;
+    margin-right: 10px;
+    width: 35px;
     height: 10px;
 }
+
 
 #spooky #body #hand {
     position: absolute;
@@ -120,7 +124,7 @@ body {
     height: 36px;
 }
 
-#spooky #body #feet > *,
+#spooky #body #feet>*,
 #spooky #body #feet::before,
 #spooky #body #feet::after {
     content: ' ';
@@ -140,7 +144,9 @@ body {
 }
 
 @keyframes floaty {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
@@ -150,11 +156,38 @@ body {
 }
 
 @keyframes zoomy {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
 
     50% {
         transform: scale(0.8);
     }
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.previous {
+    left: 20px;
+    background-color: #ffc979;
+    color: black;
+}
+
+.next {
+    right: 20px;
+
+    background-color: #ffc979;
+    color: rgb(0, 0, 0);
+}
+
+.round {
+    border-radius: 50%;
 }
