@@ -1,24 +1,29 @@
-a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
-  position: absolute;
-  bottom: 20px;
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
 }
 
-.previous {
-  left: 20px;
-  background-color: #ffc979;
-  color: black;
+img {
+  width: 25vw;
+  display: block;
+  border-radius: 35px;
+  border-width: 10px;
+  border-color: black;
+  border-style: dashed;
+
 }
 
-.next {
-  right: 20px;
-
-  background-color: #ffc979;
-  color: rgb(0, 0, 0);
+h1 {
+  text-align: center;
+  font-size: 95px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.round {
-  border-radius: 50%;
+h2 {
+  text-align: center;
+  font-size: 45px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
